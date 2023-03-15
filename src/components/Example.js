@@ -4,7 +4,7 @@ import React from "react"
 const Example = () => {
     return (
         <React.Fragment>
-        <ul style={{marginTop: '-08.5rem', marginLeft:'25.5rem', marginRight:'20.5rem', textDecoration: 'none', listStyle: 'none'}}>
+        <ul style={{marginTop: '-08.5rem', marginLeft:'15.5rem', marginRight:'30.5rem', textDecoration: 'none', listStyle: 'none'}}>
                 <li>Database examples to use:</li>
                 <br/>
                 <li>firstName: James</li>
