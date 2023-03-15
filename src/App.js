@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
+import Header from './components/Header'
+import Produto from './components/Produto'
+
+
+const App = () => {
+
+  const [dados, setDados] = React.useState(null)
+  const [carregando, setCarregando] = React.useState(null)
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <React.Fragment>
+      <Header setDados={setDados} setCarregando={setCarregando}/>
+      {carregando && <h3 style={{marginLeft:'15.5rem'}}>Loading...</h3>}
+      {!carregando && dados && <Produto dados={dados} style={{}}/>}
+    </React.Fragment>
+  )
 }
 
-export default App;
+export default App
