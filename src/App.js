@@ -14,7 +14,7 @@ const App = () => {
     <React.Fragment>
       <Header setDados={setDados} setCarregando={setCarregando}/>
       {carregando && <h3 style={{marginLeft:'15.5rem'}}>Loading...</h3>}
-      {!carregando && dados && <Produto dados={dados} style={{}}/>}
+      {!carregando && dados && <Produto dados={dados}/>}
     </React.Fragment>
   )
 }
